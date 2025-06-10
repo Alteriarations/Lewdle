@@ -5,16 +5,56 @@
     <title>Unlimited Lewdle - A lewd game</title>
     <style>
       body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 0;
-        width: 100vw;
-        background: #450000;
-        font-family: 'Clear Sans', 'Helvetica Neue', Arial, sans-serif;
-        color: #dccfcf;
-        overflow: auto;
-      }
+  			display: flex;
+  			flex-direction: column;
+  			align-items: center;
+  			margin: 0;
+  			width: 100vw;
+  			height: 100vh;
+  			background: repeating-linear-gradient(
+    			to bottom,
+    			#e40303 0%,      /* red */
+    			#e40303 16.66%,
+    			#ff8c00 16.66%,  /* orange */
+    			#ff8c00 33.33%,
+    			#ffed00 33.33%,  /* yellow */
+    			#ffed00 50%,
+    			#008026 50%,     /* green */
+    			#008026 66.66%,
+    			#24408e 66.66%,  /* blue */
+    			#24408e 83.33%,
+    			#732982 83.33%,  /* purple */
+    			#732982 100%
+  			);
+  			background-size: 100% 200%;
+  			animation: wave-flag 4s ease-in-out infinite;
+  			font-family: 'Clear Sans', 'Helvetica Neue', Arial, sans-serif;
+  			color: #dccfcf;
+  			overflow: auto;
+			}
+
+			@keyframes wave-flag {
+  			0% {
+    			background-position: 0% 0%;
+    			transform: skewY(0deg);
+  			}
+  			25% {
+    			background-position: 0% 5%;
+    			transform: skewY(1deg);
+  			}
+  			50% {
+    			background-position: 0% 0%;
+    			transform: skewY(0deg);
+  			}
+  			75% {
+    			background-position: 0% -5%;
+    			transform: skewY(-1deg);
+  			}
+  			100% {
+    			background-position: 0% 0%;
+    			transform: skewY(0deg);
+  			}
+			}
       button {
         cursor: pointer;
         outline: none;
